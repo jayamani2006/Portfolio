@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JAYASUBRAMANI S — Engineering Analytics Dashboard</title>
+<meta name="description" content="Jayasubramani S — EEE undergraduate, JS SoftTools builder. Interactive project & skills dashboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="grid-overlay" aria-hidden="true"></div>
+<canvas id="circuit-bg" aria-hidden="true"></canvas>
+
+<!-- NAV -->
+<nav class="navbar">
+  <div class="nav-logo">JS<span>_</span></div>
+  <div class="nav-links">
+    <a href="#home">home</a>
+    <a href="#stats">stats</a>
+    <a href="#skills">skills</a>
+    <a href="#timeline">timeline</a>
+    <a href="#projects">projects</a>
+    <a href="#awards">awards</a>
+    <a href="#contact">contact</a>
+  </div>
+  <a class="nav-cta" href="#" id="resume-btn">resume.pdf</a>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">// SYSTEM STATUS: ONLINE</p>
+    <h1 class="hero-name">JAYASUBRAMANI S</h1>
+    <div class="hero-role">
+      <span>&gt;</span>
+      <span id="typing-text"></span><span class="cursor">|</span>
+    </div>
+    <p class="hero-desc">
+      EEE undergraduate at Knowledge Institute of Technology, building
+      <strong>JS SoftTools</strong> — a suite of desktop utilities, audio tools,
+      and embedded projects, module by module.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-ghost">Get In Touch</a>
+    </div>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats" class="section stats-section">
+  <h2 class="section-title"><span class="tag">01</span> Resume, By The Numbers</h2>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-num" data-target="12">0</div><div class="stat-label">Projects</div></div>
+    <div class="stat-card"><div class="stat-num" data-target="7">0</div><div class="stat-label">Languages</div></div>
+    <div class="stat-card"><div class="stat-num" data-target="8">0</div><div class="stat-label">Certificates</div></div>
+    <div class="stat-card"><div class="stat-num" data-target="4">0</div><div class="stat-label">Awards</div></div>
+    <div class="stat-card"><div class="stat-num" data-target="3">0</div><div class="stat-label">Internships</div></div>
+    <div class="stat-card"><div class="stat-num" data-target="797" data-decimal="true">0</div><div class="stat-label">CGPA</div></div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section skills-section">
+  <h2 class="section-title"><span class="tag">02</span> Skills Readout</h2>
+  <div class="skills-wrap">
+    <canvas id="radar-chart" width="480" height="480"></canvas>
+    <div class="skills-bars">
+      <div class="skill-row"><span>Python</span><div class="bar"><div class="fill" style="--w:92%"></div></div><em>92%</em></div>
+      <div class="skill-row"><span>Java</span><div class="bar"><div class="fill" style="--w:75%"></div></div><em>75%</em></div>
+      <div class="skill-row"><span>Embedded / IoT</span><div class="bar"><div class="fill" style="--w:78%"></div></div><em>78%</em></div>
+      <div class="skill-row"><span>UI / UX</span><div class="bar"><div class="fill" style="--w:85%"></div></div><em>85%</em></div>
+      <div class="skill-row"><span>MySQL</span><div class="bar"><div class="fill" style="--w:70%"></div></div><em>70%</em></div>
+      <div class="skill-row"><span>Angular.js</span><div class="bar"><div class="fill" style="--w:60%"></div></div><em>60%</em></div>
+      <div class="skill-row"><span>AI Prompt Engineering</span><div class="bar"><div class="fill" style="--w:88%"></div></div><em>88%</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline" class="section timeline-section">
+  <h2 class="section-title"><span class="tag">03</span> Build Log</h2>
+  <div class="timeline" id="timeline-list"></div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section projects-section">
+  <h2 class="section-title"><span class="tag">04</span> Project Index</h2>
+  <div class="filter-bar" id="filter-bar"></div>
+  <div class="project-grid" id="project-grid"></div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards" class="section awards-section">
+  <h2 class="section-title"><span class="tag">05</span> Awards & Certificates</h2>
+  <div class="awards-grid" id="awards-grid"></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact-section">
+  <h2 class="section-title"><span class="tag">06</span> Contact</h2>
+  <div class="contact-grid">
+    <a class="contact-card" href="tel:9629252971"><span class="c-label">phone</span><span class="c-val">9629252971</span></a>
+    <a class="contact-card" href="mailto:jayasubramani@example.com"><span class="c-label">email</span><span class="c-val">jayasubramani</span></a>
+    <a class="contact-card" href="https://linkedin.com/in/jayasubramani" target="_blank" rel="noopener"><span class="c-label">linkedin</span><span class="c-val">/jayasubramani</span></a>
+    <a class="contact-card" href="https://github.com/Jayamani2006" target="_blank" rel="noopener"><span class="c-label">github</span><span class="c-val">/jayamani2006</span></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Designed &amp; built by Jayasubramani S · JS SoftTools · <span id="year"></span></p>
+</footer>
+
+<script src="assets/data/projects.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
